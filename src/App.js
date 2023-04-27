@@ -1,23 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import { Widget, WidgetConfig } from "@rango-dev/widget-embedded";
 
 function App() {
+
+  const config = {
+    // use your own api key
+    apiKey: "3635c597-77fe-4988-b258-23e1c13d98d6"
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Widget config={config} />
     </div>
   );
 }
